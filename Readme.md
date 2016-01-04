@@ -2,6 +2,8 @@
 
 I had no Internet for 4 days and this is what happened.
 
+![Demo](demo.gif)
+
 # TODO
 
 * remove not needed dependencies (npm and bower ones)
@@ -33,7 +35,7 @@ Running can be done with gulp
 Or with the `launch.sh` (be sure to make it executable)
 
 ```
-./launch.sh
+	./launch.sh
 ```
 
 #Release
