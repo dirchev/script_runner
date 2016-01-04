@@ -1,0 +1,10 @@
+{
+  "name": "scripts_runner",
+  "version": "0.0.0",
+  "description": "script runner",
+  "main": "main.js",
+  "author": {
+    "name": "dirchev",
+    "email": "dirchev@camplgith.net"
+  }
+}

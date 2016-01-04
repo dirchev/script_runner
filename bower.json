@@ -1,0 +1,15 @@
+{
+  "name": "scripts_runner",
+  "version": "0.0.0",
+  "description": "script runner",
+  "main": "app.js",
+  "author": {
+    "name": "dirchev",
+    "email": "dirchev@camplgith.net"
+  },
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "bootstrap": "~3.3.5"
+  }
+}

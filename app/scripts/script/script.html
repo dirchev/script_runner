@@ -1,0 +1,36 @@
+<div class="max-height container clearfix">
+  <h3 class="text-center">
+    Script Runner
+  </h3>
+  <div ng-hide="_ctrl.loading">
+    <form ng-submit="_ctrl.runScript(script)">
+      <div class="form-group">
+        <input autofocus placeholder="Filter scripts" type="text" class="form-control" ng-model="script" ng-keyup="_ctrl.updateSuggestions(script)">
+      </div>
+    </form>
+    <p ng-hide="_ctrl.showExitPrompt">
+      <strong>
+        Showing {{_ctrl.suggestions.length}} result{{_ctrl.suggestions.length !== 1 ? 's' : ''}}
+      </strong>
+      (hit enter to execute the first one)
+    </p>
+    <div class="list-group" ng-show="_ctrl.suggestions.length && !_ctrl.showExitPrompt">
+      <div class="list-group-item" ng-class="_ctrl.suggestions[0] === suggestion ? 'active' : ''" ng-repeat="suggestion in _ctrl.suggestions">
+        {{suggestion}}
+      </div>
+    </div>
+    <div ng-hide="_ctrl.suggestions.length" class="alert alert-info">
+      No files found, buddy.
+    </div>
+  </div>
+  <div ng-show="_ctrl.loading">
+    <div class="alert alert-info">
+      Running script...
+    </div>
+  </div>
+  <div ng-show="_ctrl.showExitPrompt">
+    <div class="alert alert-info">
+      Really want to exit? (hit enter again if yes)
+    </div>
+  </div>
+</div>
